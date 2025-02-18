@@ -9,6 +9,7 @@ import {
 
 import { useGetUsers } from './useGetUsers';
 import { UserListSkeleton } from './UserListSkeleton';
+import UserRepositoriesList from './UserRepositoriesList';
 
 export default function UserList() {
   const [searchParams] = useSearchParams();
@@ -52,7 +53,9 @@ export default function UserList() {
             <AccordionTrigger className="bg-input-background px-4 font-semibold">
               {item.login}
             </AccordionTrigger>
-            <AccordionContent>test</AccordionContent>
+            <AccordionContent>
+              <UserRepositoriesList username={item.login} />
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
