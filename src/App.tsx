@@ -1,5 +1,9 @@
-function App() {
-  return <div>Hello World</div>;
-}
+import { BrowserRouter } from 'react-router';
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div> Hello world</div>
+    </BrowserRouter>
+  );
+}
