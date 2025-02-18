@@ -60,6 +60,9 @@ export default function SearchForm() {
           render={({ field }) => (
             <FormItem className="w-full">
               <FormControl>
+                {/** NOTE:: In an ideal scenario if a custom component lib is used then the clear input feature will be
+                 * part of it, if a lib is used like mantine, mui then I would create a wrapper component similar to below.
+                 */}
                 <div className="relative">
                   <Input
                     {...field}
@@ -74,10 +77,21 @@ export default function SearchForm() {
                   />
                   {field.value && (
                     <Button
-                      onClick={onInputClear}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onInputClear();
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          onInputClear();
+                        }
+                      }}
                       variant="ghost"
                       className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer"
                       aria-label="Clear input"
+                      type="button"
+                      tabIndex={0}
                     >
                       <X className="size-5" />
                     </Button>
