@@ -7,17 +7,17 @@ import {
   AccordionTrigger,
 } from '@/components/ui';
 
-import { SearchResultSkeleton } from './SearchResultSkeleton';
 import { useGetUsers } from './useGetUsers';
+import { UserListSkeleton } from './UserListSkeleton';
 
-export default function SearchResults() {
+export default function UserList() {
   const [searchParams] = useSearchParams();
 
   const username = searchParams.get('username') ?? '';
   const { isLoading, error, data } = useGetUsers(username);
 
   if (isLoading) {
-    return <SearchResultSkeleton />;
+    return <UserListSkeleton />;
   }
 
   if (error) {

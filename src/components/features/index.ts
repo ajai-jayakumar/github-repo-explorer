@@ -1,2 +1,2 @@
-export { default as SearchForm } from './Search/SearchForm.tsx';
-export { default as SearchResults } from './Search/SearchResults.tsx';
+export { default as UserList } from './UserList.tsx';
+export { default as UserSearchForm } from './UserSearchForm.tsx';

@@ -22,7 +22,7 @@ const FormSchema = z.object({
 
 type FormValues = z.infer<typeof FormSchema>;
 
-export default function SearchForm() {
+export default function UserSearchForm() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const username = searchParams.get('username') ?? '';
@@ -88,7 +88,7 @@ export default function SearchForm() {
                         }
                       }}
                       variant="ghost"
-                      className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer"
+                      className="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer focus-visible:ring-0"
                       aria-label="Clear input"
                       type="button"
                       tabIndex={0}
