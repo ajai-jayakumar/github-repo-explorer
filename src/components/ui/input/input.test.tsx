@@ -3,6 +3,8 @@ import userEvent from '@testing-library/user-event';
 
 import { Input } from '../input/input';
 
+// NOTE: In production grade project, I would test all the possible states of the component
+// and would use snapshot tests in storybook to test the visuals.
 describe('Input Component', () => {
   it('renders the component', () => {
     render(<Input data-testid="input" />);
