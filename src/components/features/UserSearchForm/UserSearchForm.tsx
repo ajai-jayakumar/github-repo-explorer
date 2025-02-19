@@ -73,7 +73,7 @@ export default function UserSearchForm() {
                     {...field}
                     id="username"
                     placeholder="Enter username"
-                    data-test-id="username"
+                    data-testid="username-input"
                     className="p-5 pr-10 md:p-6 md:pr-12"
                     aria-label="Username input"
                     aria-invalid={!!form.formState.errors.username}
@@ -97,6 +97,7 @@ export default function UserSearchForm() {
                       aria-label="Clear input"
                       type="button"
                       tabIndex={0}
+                      data-testid="clear-input-button"
                     >
                       <X className="size-5" />
                     </Button>
@@ -107,7 +108,11 @@ export default function UserSearchForm() {
             </FormItem>
           )}
         />
-        <Button className="w-full cursor-pointer p-6 md:w-sm" type="submit">
+        <Button
+          className="w-full cursor-pointer p-6 md:w-sm"
+          type="submit"
+          data-testid="submit-form"
+        >
           Submit
         </Button>
       </form>
