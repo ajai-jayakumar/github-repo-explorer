@@ -1,16 +1,17 @@
-import { z } from 'zod';
+import {
+  ApiResponse,
+  GithubUser,
+  GithubUserSearchResponseSchema,
+} from '@/lib/types';
 
 const BASE_URL = import.meta.env.VITE_API_BASE_PATH;
 
-export type GithubUserSchema = z.infer<typeof GithubUserSchema>;
-
-interface GithubUser {
-  data: GithubUserSchema[];
-  error: string | null;
-}
-
-export const getUsers = async (username: string): Promise<GithubUser> => {
+export const getUsers = async (
+  username: string
+): Promise<ApiResponse<GithubUser[]>> => {
   try {
+    // NOTE: Instead of making an API call like this, in an production grade project I would create a
+    // wrapper which takes care of api url, passing headers, handling server errors, session expiry etc.
     const url = `${BASE_URL}/search/users?q=${username}&per_page=5`;
 
     const response = await fetch(url);
@@ -20,6 +21,9 @@ export const getUsers = async (username: string): Promise<GithubUser> => {
     }
 
     const rawData = await response.json();
+
+    // NOTE:: In a real world scenario, I prefer OpenAPI / Swagger Code Generation instead of zod
+    // to vaidate the api response
 
     const result = GithubUserSearchResponseSchema.safeParse(rawData);
 
@@ -35,35 +39,3 @@ export const getUsers = async (username: string): Promise<GithubUser> => {
     return { data: [], error: errorMessage };
   }
 };
-
-// NOTE:: In a real world scenario, I prefer OpenAPI / Swagger Code Generation instead of zod
-// to vaidate the api response
-
-// Also placed the zod schema in the bottom so the actual logic of this function can be ready with ease
-const GithubUserSchema = z.object({
-  login: z.string(),
-  id: z.number(),
-  node_id: z.string(),
-  avatar_url: z.string().url().nullable(),
-  gravatar_id: z.string().nullable(),
-  url: z.string().url().nullable(),
-  html_url: z.string().url().nullable(),
-  followers_url: z.string().url().nullable(),
-  following_url: z.string().nullable(),
-  gists_url: z.string().nullable(),
-  starred_url: z.string().nullable(),
-  subscriptions_url: z.string().url().nullable(),
-  organizations_url: z.string().url().nullable(),
-  repos_url: z.string().url().nullable(),
-  events_url: z.string().nullable(),
-  received_events_url: z.string().url().nullable(),
-  type: z.string().nullable(),
-  site_admin: z.boolean().nullable(),
-  score: z.number().nullable().optional(),
-});
-
-const GithubUserSearchResponseSchema = z.object({
-  total_count: z.number(),
-  incomplete_results: z.boolean(),
-  items: z.array(GithubUserSchema),
-});

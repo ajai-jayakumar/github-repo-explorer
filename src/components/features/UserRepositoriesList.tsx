@@ -1,6 +1,6 @@
-import { RepositoryCard } from './RepositoryCard';
+import RepositoryCard from './RepositoryCard';
 import { useGetUserRepositories } from './useGetUserRepositories';
-import { UserRepositoriesListSkeleton } from './UserRepositoriesListSkeleton';
+import UserRepositoriesListSkeleton from './UserRepositoriesListSkeleton';
 
 export default function UserRepositoriesList({
   username,
@@ -13,6 +13,8 @@ export default function UserRepositoriesList({
     return <UserRepositoriesListSkeleton />;
   }
 
+  // Would use a common error boundary type layout to have consistent UI and
+  // avoid repetation of code in production grade project.
   if (error) {
     return (
       <div className="w-full text-center" role="alert">

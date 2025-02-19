@@ -1,8 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getUserRepositories } from '@/api/getUserRepositories';
+import { ApiResponse, GithubRepositoryItem } from '@/lib/types';
 
-export const useGetUserRepositories = (username: string) => {
+interface UseGetUserRepositoriesResult
+  extends ApiResponse<GithubRepositoryItem[]> {
+  isLoading: boolean;
+}
+
+export const useGetUserRepositories = (
+  username: string
+): UseGetUserRepositoriesResult => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['repositories', username],
     queryFn: () => getUserRepositories(username),
@@ -12,6 +20,6 @@ export const useGetUserRepositories = (username: string) => {
   return {
     isLoading,
     data: data?.data ?? [],
-    error: error ?? data?.error,
+    error: error ? (error as Error).message : (data?.error ?? null),
   };
 };

@@ -1,14 +1,16 @@
 import { Star } from 'lucide-react';
 
-export const RepositoryCard = ({
+interface RepositoryCardProps {
+  name: string;
+  description: string | null;
+  starCount: number | null;
+}
+
+export default function RepositoryCard({
   name,
   description,
   starCount = 0,
-}: {
-  name: string;
-  description: string | null;
-  starCount: number;
-}) => {
+}: RepositoryCardProps) {
   return (
     <div className="flex min-h-24 items-start rounded bg-gray-200 p-3">
       <div className="flex-1 overflow-hidden break-words">
@@ -21,4 +23,4 @@ export const RepositoryCard = ({
       </div>
     </div>
   );
-};
+}

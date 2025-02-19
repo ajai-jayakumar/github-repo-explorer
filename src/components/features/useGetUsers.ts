@@ -1,8 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { getUsers } from '@/api/getUsers';
+import { ApiResponse, GithubUser } from '@/lib/types';
 
-export const useGetUsers = (username: string) => {
+interface UseGetUsersResult extends ApiResponse<GithubUser[]> {
+  isLoading: boolean;
+}
+
+export const useGetUsers = (username: string): UseGetUsersResult => {
   const { isLoading, error, data } = useQuery({
     queryKey: ['users', username],
     queryFn: () => getUsers(username),
@@ -12,6 +17,6 @@ export const useGetUsers = (username: string) => {
   return {
     isLoading,
     data: data?.data ?? [],
-    error: error ?? data?.error,
+    error: error ? (error as Error).message : (data?.error ?? null),
   };
 };

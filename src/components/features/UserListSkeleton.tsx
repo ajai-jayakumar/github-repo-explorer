@@ -1,4 +1,4 @@
-export function UserListSkeleton() {
+export default function UserListSkeleton() {
   return (
     <div>
       <div className="animate-pulse">

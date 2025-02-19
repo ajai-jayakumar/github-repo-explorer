@@ -1,4 +1,4 @@
-export function UserRepositoriesListSkeleton() {
+export default function UserRepositoriesListSkeleton() {
   return (
     <div className="my-3 ml-6 grid grid-cols-1 gap-2 md:grid-cols-2">
       {[...Array(6)].map((_, i) => (

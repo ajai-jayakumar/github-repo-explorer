@@ -14,6 +14,7 @@ import {
   Input,
 } from '@/components/ui';
 
+// The form schema will be in a seperate file, since its only one filed its placed here
 const FormSchema = z.object({
   username: z.string().min(2, {
     message: 'Username must be at least 2 characters.',
@@ -35,6 +36,8 @@ export default function UserSearchForm() {
   });
 
   const onSubmit = (values: FormValues) => {
+    // Scenario where I want to preserve existing params while updating username
+    // I would use the following approach
     setSearchParams((prev) => {
       const newParams = new URLSearchParams(prev);
       newParams.set('username', values.username);
@@ -43,6 +46,7 @@ export default function UserSearchForm() {
   };
 
   const onInputClear = () => {
+    //  Scenario to reset all params, the I would use the following approach
     form.setValue('username', '');
     setSearchParams('');
   };
@@ -60,8 +64,9 @@ export default function UserSearchForm() {
           render={({ field }) => (
             <FormItem className="w-full">
               <FormControl>
-                {/** NOTE:: In an ideal scenario if a custom component lib is used then the clear input feature will be
-                 * part of it, if a lib is used like mantine, mui then I would create a wrapper component similar to below.
+                {/** NOTE:: In an ideal scenario if a custom component lib is used then "clearing the input feature 'x'" will be
+                 * part of the same component, if a component library is used like mantine, mui then
+                 * I would create a custom wrapper component to support input clear option.
                  */}
                 <div className="relative">
                   <Input

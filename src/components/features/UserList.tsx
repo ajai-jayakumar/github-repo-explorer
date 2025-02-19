@@ -8,7 +8,7 @@ import {
 } from '@/components/ui';
 
 import { useGetUsers } from './useGetUsers';
-import { UserListSkeleton } from './UserListSkeleton';
+import UserListSkeleton from './UserListSkeleton';
 import UserRepositoriesList from './UserRepositoriesList';
 
 export default function UserList() {
