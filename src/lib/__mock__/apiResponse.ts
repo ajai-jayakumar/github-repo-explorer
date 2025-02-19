@@ -1,0 +1,51 @@
+import { GithubUser } from '../types';
+
+export const mockUsers: GithubUser[] = [
+  {
+    login: 'john',
+    id: 1668,
+    node_id: 'MDQ6VXNlcjE2Njg=',
+    avatar_url: 'https://avatars.githubusercontent.com/u/1668?v=4',
+    gravatar_id: '',
+    url: 'https://api.github.com/users/john',
+    html_url: 'https://github.com/john',
+    followers_url: 'https://api.github.com/users/john/followers',
+    following_url: 'https://api.github.com/users/john/following{/other_user}',
+    gists_url: 'https://api.github.com/users/john/gists{/gist_id}',
+    starred_url: 'https://api.github.com/users/john/starred{/owner}{/repo}',
+    subscriptions_url: 'https://api.github.com/users/john/subscriptions',
+    organizations_url: 'https://api.github.com/users/john/orgs',
+    repos_url: 'https://api.github.com/users/john/repos',
+    events_url: 'https://api.github.com/users/john/events{/privacy}',
+    received_events_url: 'https://api.github.com/users/john/received_events',
+    type: 'User',
+    user_view_type: 'public',
+    site_admin: false,
+    score: 1.0,
+  },
+  {
+    login: 'john-smilga',
+    id: 42133389,
+    node_id: 'MDQ6VXNlcjQyMTMzMzg5',
+    avatar_url: 'https://avatars.githubusercontent.com/u/42133389?v=4',
+    gravatar_id: '',
+    url: 'https://api.github.com/users/john-smilga',
+    html_url: 'https://github.com/john-smilga',
+    followers_url: 'https://api.github.com/users/john-smilga/followers',
+    following_url:
+      'https://api.github.com/users/john-smilga/following{/other_user}',
+    gists_url: 'https://api.github.com/users/john-smilga/gists{/gist_id}',
+    starred_url:
+      'https://api.github.com/users/john-smilga/starred{/owner}{/repo}',
+    subscriptions_url: 'https://api.github.com/users/john-smilga/subscriptions',
+    organizations_url: 'https://api.github.com/users/john-smilga/orgs',
+    repos_url: 'https://api.github.com/users/john-smilga/repos',
+    events_url: 'https://api.github.com/users/john-smilga/events{/privacy}',
+    received_events_url:
+      'https://api.github.com/users/john-smilga/received_events',
+    type: 'User',
+    user_view_type: 'public',
+    site_admin: false,
+    score: 1.0,
+  },
+];

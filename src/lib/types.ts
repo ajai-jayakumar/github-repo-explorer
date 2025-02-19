@@ -26,6 +26,7 @@ export const GithubUserSchema = z.object({
   received_events_url: z.string().url().nullable(),
   type: z.string().nullable(),
   site_admin: z.boolean().nullable(),
+  user_view_type: z.string().nullable(),
   score: z.number().nullable().optional(),
 });
 
