@@ -7,9 +7,10 @@ import {
   AccordionTrigger,
 } from '@/components/ui';
 
+import UserRepositoriesList from '../RepositoriesList/UserRepositoriesList';
+
 import { useGetUsers } from './useGetUsers';
 import UserListSkeleton from './UserListSkeleton';
-import UserRepositoriesList from './UserRepositoriesList';
 
 export default function UserList() {
   const [searchParams] = useSearchParams();

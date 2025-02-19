@@ -27,7 +27,7 @@ export default function UserRepositoriesList({
 
   if (data?.length === 0) {
     return (
-      <div className="w-full text-left md:text-center" role="status">
+      <div className="my-4 w-full text-left md:text-center" role="status">
         <p>{`No repositories available for "${username}"`}</p>
       </div>
     );

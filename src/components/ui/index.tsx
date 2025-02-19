@@ -3,8 +3,8 @@ export {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './accordion';
-export { Button } from './button';
+} from './accordion/accordion';
+export { Button } from './button/button';
 export {
   Form,
   FormControl,
@@ -13,6 +13,6 @@ export {
   FormItem,
   FormLabel,
   FormMessage,
-} from './form';
-export { Input } from './input';
-export { Label } from './label';
+} from './form/form';
+export { Input } from './input/input';
+export { Label } from './label/label';
