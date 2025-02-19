@@ -1,4 +1,4 @@
-import { GithubUser } from '../types';
+import { GithubRepositoryItem, GithubUser } from '../types';
 
 export const mockUsers: GithubUser[] = [
   {
@@ -47,5 +47,265 @@ export const mockUsers: GithubUser[] = [
     user_view_type: 'public',
     site_admin: false,
     score: 1.0,
+  },
+];
+
+export const mockUserRespositories: GithubRepositoryItem[] = [
+  {
+    id: 352405331,
+    node_id: 'MDEwOlJlcG9zaXRvcnkzNTI0MDUzMzE=',
+    name: '0days-in-the-wild',
+    full_name: 'alex/0days-in-the-wild',
+    private: false,
+    owner: {
+      login: 'alex',
+      id: 772,
+      node_id: 'MDQ6VXNlcjc3Mg==',
+      avatar_url: 'https://avatars.githubusercontent.com/u/772?v=4',
+      gravatar_id: '',
+      url: 'https://api.github.com/users/alex',
+      html_url: 'https://github.com/alex',
+      followers_url: 'https://api.github.com/users/alex/followers',
+      following_url: 'https://api.github.com/users/alex/following{/other_user}',
+      gists_url: 'https://api.github.com/users/alex/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/alex/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/alex/subscriptions',
+      organizations_url: 'https://api.github.com/users/alex/orgs',
+      repos_url: 'https://api.github.com/users/alex/repos',
+      events_url: 'https://api.github.com/users/alex/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/alex/received_events',
+      type: 'User',
+      user_view_type: 'public',
+      site_admin: false,
+    },
+    html_url: 'https://github.com/alex/0days-in-the-wild',
+    description:
+      'Repository for information about 0-days exploited in-the-wild.',
+    fork: true,
+    url: 'https://api.github.com/repos/alex/0days-in-the-wild',
+    forks_url: 'https://api.github.com/repos/alex/0days-in-the-wild/forks',
+    keys_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/keys{/key_id}',
+    collaborators_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/collaborators{/collaborator}',
+    teams_url: 'https://api.github.com/repos/alex/0days-in-the-wild/teams',
+    hooks_url: 'https://api.github.com/repos/alex/0days-in-the-wild/hooks',
+    issue_events_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/issues/events{/number}',
+    events_url: 'https://api.github.com/repos/alex/0days-in-the-wild/events',
+    assignees_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/assignees{/user}',
+    branches_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/branches{/branch}',
+    tags_url: 'https://api.github.com/repos/alex/0days-in-the-wild/tags',
+    blobs_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/git/blobs{/sha}',
+    git_tags_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/git/tags{/sha}',
+    git_refs_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/git/refs{/sha}',
+    trees_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/git/trees{/sha}',
+    statuses_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/statuses/{sha}',
+    languages_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/languages',
+    stargazers_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/stargazers',
+    contributors_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/contributors',
+    subscribers_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/subscribers',
+    subscription_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/subscription',
+    commits_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/commits{/sha}',
+    git_commits_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/git/commits{/sha}',
+    comments_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/comments{/number}',
+    issue_comment_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/issues/comments{/number}',
+    contents_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/contents/{+path}',
+    compare_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/compare/{base}...{head}',
+    merges_url: 'https://api.github.com/repos/alex/0days-in-the-wild/merges',
+    archive_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/{archive_format}{/ref}',
+    downloads_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/downloads',
+    issues_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/issues{/number}',
+    pulls_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/pulls{/number}',
+    milestones_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/milestones{/number}',
+    notifications_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/notifications{?since,all,participating}',
+    labels_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/labels{/name}',
+    releases_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/releases{/id}',
+    deployments_url:
+      'https://api.github.com/repos/alex/0days-in-the-wild/deployments',
+    created_at: '2021-03-28T18:20:49Z',
+    updated_at: '2024-04-02T17:49:06Z',
+    pushed_at: '2023-04-12T05:33:47Z',
+    git_url: 'git://github.com/alex/0days-in-the-wild.git',
+    ssh_url: 'git@github.com:alex/0days-in-the-wild.git',
+    clone_url: 'https://github.com/alex/0days-in-the-wild.git',
+    svn_url: 'https://github.com/alex/0days-in-the-wild',
+    homepage: 'https://googleprojectzero.github.io/0days-in-the-wild',
+    size: 111,
+    stargazers_count: 1,
+    watchers_count: 1,
+    language: null,
+    has_issues: false,
+    has_projects: true,
+    has_downloads: true,
+    has_wiki: false,
+    has_pages: false,
+    has_discussions: false,
+    forks_count: 0,
+    mirror_url: null,
+    archived: false,
+    disabled: false,
+    open_issues_count: 1,
+    license: {
+      key: 'apache-2.0',
+      name: 'Apache License 2.0',
+      spdx_id: 'Apache-2.0',
+      url: 'https://api.github.com/licenses/apache-2.0',
+      node_id: 'MDc6TGljZW5zZTI=',
+    },
+    allow_forking: true,
+    is_template: false,
+    web_commit_signoff_required: false,
+    topics: [],
+    visibility: 'public',
+    forks: 0,
+    open_issues: 1,
+    watchers: 1,
+    default_branch: 'main',
+  },
+  {
+    id: 324637707,
+    node_id: 'MDEwOlJlcG9zaXRvcnkzMjQ2Mzc3MDc=',
+    name: 'abscissa',
+    full_name: 'alex/abscissa',
+    private: false,
+    owner: {
+      login: 'alex',
+      id: 772,
+      node_id: 'MDQ6VXNlcjc3Mg==',
+      avatar_url: 'https://avatars.githubusercontent.com/u/772?v=4',
+      gravatar_id: '',
+      url: 'https://api.github.com/users/alex',
+      html_url: 'https://github.com/alex',
+      followers_url: 'https://api.github.com/users/alex/followers',
+      following_url: 'https://api.github.com/users/alex/following{/other_user}',
+      gists_url: 'https://api.github.com/users/alex/gists{/gist_id}',
+      starred_url: 'https://api.github.com/users/alex/starred{/owner}{/repo}',
+      subscriptions_url: 'https://api.github.com/users/alex/subscriptions',
+      organizations_url: 'https://api.github.com/users/alex/orgs',
+      repos_url: 'https://api.github.com/users/alex/repos',
+      events_url: 'https://api.github.com/users/alex/events{/privacy}',
+      received_events_url: 'https://api.github.com/users/alex/received_events',
+      type: 'User',
+      user_view_type: 'public',
+      site_admin: false,
+    },
+    html_url: 'https://github.com/alex/abscissa',
+    description:
+      'Application microframework with command-line option parsing, configuration, error handling, logging, and shell interactions',
+    fork: true,
+    url: 'https://api.github.com/repos/alex/abscissa',
+    forks_url: 'https://api.github.com/repos/alex/abscissa/forks',
+    keys_url: 'https://api.github.com/repos/alex/abscissa/keys{/key_id}',
+    collaborators_url:
+      'https://api.github.com/repos/alex/abscissa/collaborators{/collaborator}',
+    teams_url: 'https://api.github.com/repos/alex/abscissa/teams',
+    hooks_url: 'https://api.github.com/repos/alex/abscissa/hooks',
+    issue_events_url:
+      'https://api.github.com/repos/alex/abscissa/issues/events{/number}',
+    events_url: 'https://api.github.com/repos/alex/abscissa/events',
+    assignees_url:
+      'https://api.github.com/repos/alex/abscissa/assignees{/user}',
+    branches_url:
+      'https://api.github.com/repos/alex/abscissa/branches{/branch}',
+    tags_url: 'https://api.github.com/repos/alex/abscissa/tags',
+    blobs_url: 'https://api.github.com/repos/alex/abscissa/git/blobs{/sha}',
+    git_tags_url: 'https://api.github.com/repos/alex/abscissa/git/tags{/sha}',
+    git_refs_url: 'https://api.github.com/repos/alex/abscissa/git/refs{/sha}',
+    trees_url: 'https://api.github.com/repos/alex/abscissa/git/trees{/sha}',
+    statuses_url: 'https://api.github.com/repos/alex/abscissa/statuses/{sha}',
+    languages_url: 'https://api.github.com/repos/alex/abscissa/languages',
+    stargazers_url: 'https://api.github.com/repos/alex/abscissa/stargazers',
+    contributors_url: 'https://api.github.com/repos/alex/abscissa/contributors',
+    subscribers_url: 'https://api.github.com/repos/alex/abscissa/subscribers',
+    subscription_url: 'https://api.github.com/repos/alex/abscissa/subscription',
+    commits_url: 'https://api.github.com/repos/alex/abscissa/commits{/sha}',
+    git_commits_url:
+      'https://api.github.com/repos/alex/abscissa/git/commits{/sha}',
+    comments_url:
+      'https://api.github.com/repos/alex/abscissa/comments{/number}',
+    issue_comment_url:
+      'https://api.github.com/repos/alex/abscissa/issues/comments{/number}',
+    contents_url: 'https://api.github.com/repos/alex/abscissa/contents/{+path}',
+    compare_url:
+      'https://api.github.com/repos/alex/abscissa/compare/{base}...{head}',
+    merges_url: 'https://api.github.com/repos/alex/abscissa/merges',
+    archive_url:
+      'https://api.github.com/repos/alex/abscissa/{archive_format}{/ref}',
+    downloads_url: 'https://api.github.com/repos/alex/abscissa/downloads',
+    issues_url: 'https://api.github.com/repos/alex/abscissa/issues{/number}',
+    pulls_url: 'https://api.github.com/repos/alex/abscissa/pulls{/number}',
+    milestones_url:
+      'https://api.github.com/repos/alex/abscissa/milestones{/number}',
+    notifications_url:
+      'https://api.github.com/repos/alex/abscissa/notifications{?since,all,participating}',
+    labels_url: 'https://api.github.com/repos/alex/abscissa/labels{/name}',
+    releases_url: 'https://api.github.com/repos/alex/abscissa/releases{/id}',
+    deployments_url: 'https://api.github.com/repos/alex/abscissa/deployments',
+    created_at: '2020-12-26T21:26:25Z',
+    updated_at: '2024-04-02T17:48:22Z',
+    pushed_at: '2023-06-13T22:29:58Z',
+    git_url: 'git://github.com/alex/abscissa.git',
+    ssh_url: 'git@github.com:alex/abscissa.git',
+    clone_url: 'https://github.com/alex/abscissa.git',
+    svn_url: 'https://github.com/alex/abscissa',
+    homepage: '',
+    size: 924,
+    stargazers_count: 1,
+    watchers_count: 1,
+    language: null,
+    has_issues: false,
+    has_projects: true,
+    has_downloads: true,
+    has_wiki: true,
+    has_pages: false,
+    has_discussions: false,
+    forks_count: 0,
+    mirror_url: null,
+    archived: false,
+    disabled: false,
+    open_issues_count: 1,
+    license: {
+      key: 'apache-2.0',
+      name: 'Apache License 2.0',
+      spdx_id: 'Apache-2.0',
+      url: 'https://api.github.com/licenses/apache-2.0',
+      node_id: 'MDc6TGljZW5zZTI=',
+    },
+    allow_forking: true,
+    is_template: false,
+    web_commit_signoff_required: false,
+    topics: [],
+    visibility: 'public',
+    forks: 0,
+    open_issues: 1,
+    watchers: 1,
+    default_branch: 'develop',
   },
 ];

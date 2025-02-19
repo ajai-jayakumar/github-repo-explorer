@@ -86,18 +86,9 @@ export const GithubRepositoryItemSchema = z.object({
   labels_url: z.string().url().nullable(),
   releases_url: z.string().url().nullable(),
   deployments_url: z.string().url().nullable(),
-  created_at: z
-    .string()
-    .transform((date) => new Date(date))
-    .nullable(),
-  updated_at: z
-    .string()
-    .transform((date) => new Date(date))
-    .nullable(),
-  pushed_at: z
-    .string()
-    .transform((date) => new Date(date))
-    .nullable(),
+  created_at: z.string().nullable(),
+  updated_at: z.string().nullable(),
+  pushed_at: z.string().nullable(),
   git_url: z.string().nullable(),
   ssh_url: z.string().nullable(),
   clone_url: z.string().nullable(),

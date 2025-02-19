@@ -17,7 +17,7 @@ export default function UserRepositoriesList({
   // avoid repetation of code in production grade project.
   if (error) {
     return (
-      <div className="w-full text-center" role="alert">
+      <div className="w-full text-center" role="alert" data-testId="error-msg">
         <p className="text-destructive">
           Error fetching the user repositories data
         </p>
@@ -27,14 +27,21 @@ export default function UserRepositoriesList({
 
   if (data?.length === 0) {
     return (
-      <div className="my-4 w-full text-left md:text-center" role="status">
+      <div
+        className="my-4 w-full text-left md:text-center"
+        role="status"
+        data-testId="no-repositories-msg"
+      >
         <p>{`No repositories available for "${username}"`}</p>
       </div>
     );
   }
 
   return (
-    <div className="my-3 ml-6 grid grid-cols-1 gap-2 md:grid-cols-2">
+    <div
+      className="my-3 ml-6 grid grid-cols-1 gap-2 md:grid-cols-2"
+      data-testId="repository-list-wrapper"
+    >
       {data.map((item) => (
         <RepositoryCard
           key={item.id}
