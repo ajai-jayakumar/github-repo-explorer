@@ -1,6 +1,6 @@
 export default function UserListSkeleton() {
   return (
-    <div data-testId="user-list-skeleton">
+    <div data-testid="user-list-skeleton">
       <div className="animate-pulse">
         <div className="m-auto h-8 w-1/2 rounded bg-gray-200" />
       </div>

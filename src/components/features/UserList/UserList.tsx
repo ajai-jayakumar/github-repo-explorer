@@ -24,7 +24,7 @@ export default function UserList() {
 
   if (error) {
     return (
-      <div className="w-full text-center" role="alert" data-testId="error-msg">
+      <div className="w-full text-center" role="alert" data-testid="error-msg">
         <p className="text-destructive">Error fetching the user data</p>
       </div>
     );
@@ -39,7 +39,7 @@ export default function UserList() {
       <div
         className="w-full text-left md:text-center"
         role="status"
-        data-testId="no-user-msg"
+        data-testid="no-user-msg"
       >
         <p>{`No users available with username "${username}"`}</p>
       </div>
@@ -51,14 +51,18 @@ export default function UserList() {
       <div
         className="mb-3 w-full text-left md:text-center"
         role="status"
-        data-testId="show-result-info"
+        data-testid="show-result-info"
       >
         <p>{`Showing user${data.length === 1 ? '' : 's'} for "${username}"`}</p>
       </div>
 
-      <Accordion type="multiple" className="space-y-2" data-testId="user-list">
+      <Accordion type="multiple" className="space-y-2" data-testid="user-list">
         {data.map((item) => (
-          <AccordionItem key={item.id} value={item.login}>
+          <AccordionItem
+            key={item.id}
+            value={item.login}
+            data-testid="user-list-item"
+          >
             <AccordionTrigger className="bg-input-background px-4 font-semibold">
               {item.login}
             </AccordionTrigger>

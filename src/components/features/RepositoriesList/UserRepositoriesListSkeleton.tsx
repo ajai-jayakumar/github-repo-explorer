@@ -2,7 +2,7 @@ export default function UserRepositoriesListSkeleton() {
   return (
     <div
       className="my-3 ml-6 grid grid-cols-1 gap-2 md:grid-cols-2"
-      data-testId="repositories-list-skeleton"
+      data-testid="repositories-list-skeleton"
     >
       {[...Array(6)].map((_, i) => (
         <div key={i} className="animate-pulse">
