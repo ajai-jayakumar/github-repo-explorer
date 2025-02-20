@@ -1,5 +1,6 @@
+import { useGetUserRepositories } from '../hook/useGetUserRepositories';
+
 import RepositoryCard from './RepositoryCard';
-import { useGetUserRepositories } from './useGetUserRepositories';
 import UserRepositoriesListSkeleton from './UserRepositoriesListSkeleton';
 
 export default function UserRepositoriesList({

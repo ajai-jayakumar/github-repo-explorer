@@ -6,7 +6,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import * as api from '@/api/getUsers';
 import { mockUsers } from '@/lib/__mock__/apiResponse';
 
-import UserList from './UserList';
+import UserList from '../component/UserList';
 
 function UserListWrapper({ initialPath = '/' }) {
   const [queryClient] = React.useState(() => new QueryClient());

@@ -2,7 +2,7 @@ import { MemoryRouter } from 'react-router';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import UserSearchForm from './UserSearchForm';
+import UserSearchForm from './userSearchForm';
 
 const setSearchParamsMock = vi.fn();
 

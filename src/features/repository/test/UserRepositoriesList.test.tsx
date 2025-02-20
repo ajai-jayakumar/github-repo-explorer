@@ -6,7 +6,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import * as api from '@/api/getUserRepositories';
 import { mockUserRespositories } from '@/lib/__mock__/apiResponse';
 
-import UserRepositoriesList from './UserRepositoriesList';
+import UserRepositoriesList from '../component/UserRepositoriesList';
 
 function UserRespositoryWrapper({ username = '' }) {
   const [queryClient] = React.useState(() => new QueryClient());

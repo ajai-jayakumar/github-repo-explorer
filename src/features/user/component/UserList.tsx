@@ -5,11 +5,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui';
+} from '@/components';
 
-import UserRepositoriesList from '../RepositoriesList/UserRepositoriesList';
+import UserRepositoriesList from '../../repository/component/UserRepositoriesList';
+import { useGetUsers } from '../hook/useGetUsers';
 
-import { useGetUsers } from './useGetUsers';
 import UserListSkeleton from './UserListSkeleton';
 
 export default function UserList() {

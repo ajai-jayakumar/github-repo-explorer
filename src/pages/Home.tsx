@@ -1,4 +1,4 @@
-import { UserList, UserSearchForm } from '@/components/features';
+import { UserList, UserSearchForm } from '@/features';
 
 export default function Home() {
   return (

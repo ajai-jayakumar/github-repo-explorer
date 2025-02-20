@@ -12,7 +12,7 @@ import {
   FormItem,
   FormMessage,
   Input,
-} from '@/components/ui';
+} from '@/components';
 
 // The form schema will be in a seperate file, since its only one filed its placed here
 const FormSchema = z.object({

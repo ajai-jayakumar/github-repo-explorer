@@ -51,10 +51,17 @@ You can also view the live demo of this application in https://github-repo-explo
    - Automatic caching, background refetching, optimistic updates and much more are provided by the library.
    - The ReactQueryProvider is placed inside a folder called `provider`, this is done to group all the providers in one location.
 8. **Zod**
+
    - Although TypeScript is used for type validation, it has some limitations in certain areas.
    - I prefer using **Zod** as a schema validator in cases where TypeScript is not the right fit, eg. **form validation**.
    - TS run validation during compile time whereas zod does during runtime which provides added advantage for many use cases.
    - Zod can be used for validating form, api response, env configuration, etc.
+
+9. **File and Folder Structure**
+
+   - This is a subjective topic, and there are no fixed rules, guidelines, or formulas to follow—it depends on the use case.
+   - The file and folder structure in this task is based on the current state of the features.
+   - In general, it's best to create a plan that suits the team, tech stack, and project complexity.
 
 # System Architecture
 
